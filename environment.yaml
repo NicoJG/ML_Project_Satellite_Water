@@ -1,0 +1,31 @@
+name: ml_project
+
+channels:
+  - defaults
+
+dependencies:
+  - python=3.9
+  # nativ python packages
+  - pip
+  - jupyter
+  - pillow=8.2
+  - requests=2.23
+  - pytest
+  - tqdm
+  # scipy packages
+  - numpy=1.20
+  - scipy=1.6
+  - conda-forge::matplotlib=3.4
+  - pandas=1.2
+  - seaborn=0.11
+  - scikit-image=0.18
+  # machine learning packages
+  - scikit-learn=0.24
+  # geography and geometry packages
+  - shapely=1.7
+  - geopandas=0.9
+  - folium=0.12
+  - conda-forge::mercantile
+  - pip:
+    - vt2geojson
+    - mapbox-vector-tile
