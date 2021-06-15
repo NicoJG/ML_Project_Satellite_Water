@@ -8,6 +8,8 @@ dependencies:
   # nativ python packages
   - pip
   - jupyter
+  - notebook
+  - jupyterlab
   - pillow=8.2
   - requests=2.23
   - pytest
