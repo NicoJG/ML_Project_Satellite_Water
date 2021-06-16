@@ -10,6 +10,7 @@ dependencies:
   - jupyter
   - notebook
   - jupyterlab
+  - ipympl
   - pillow=8.2
   - requests=2.23
   - pytest
