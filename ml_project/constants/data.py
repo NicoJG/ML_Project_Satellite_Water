@@ -1,0 +1,2 @@
+RASTER_FORMAT = 'jpg90'
+PX_WIDTH = 256
