@@ -1,5 +1,5 @@
 # main folders
-DATA = '../ML_Project_Data/'
+DATA = '../../data/'
 
 DATASET = DATA + 'dataset/'
 DATASET_META = DATA + 'dataset_metadata/'
@@ -13,7 +13,9 @@ NE_110M_COUNTRIES_SHP = NATURAL_EARTH + 'ne_110m_admin_0_countries/ne_110m_admin
 VECTOR_TILES = DATASET_META + 'vector_tiles/'
 
 def FILE_VECTOR_TILE(x,y,z,tileset_ids):
-    return f'{VECTOR_TILES}z{z}x{x}y{y}_{','.join(tileset_ids)}.mvt'
+    return f'{VECTOR_TILES}z{z}x{x}y{y}_{",".join(tileset_ids)}.mvt'
+
+FILE_POINTS = DATASET_META + 'points.csv'
 
 # actual dataset
 IMAGES = DATASET + 'images/'
@@ -25,5 +27,7 @@ def FILE_SATELLITE_IMAGE(x,y,z,size):
 
 def FILE_MASK_IMAGE(x,y,z,size):
     return f'{MASK_IMAGES}z{z}x{x}y{y}_px{size}.png'
+
+FILE_METADATA = DATASET + 'metadata.csv'
 
 
