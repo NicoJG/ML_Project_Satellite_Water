@@ -1,10 +1,12 @@
+import os
 from pathlib import Path
+from ml_project.constants import mapbox,data
 import ml_project
 
-# points to the main folder (the folder with the .git folder in it)
+# points to the main directory (the directory with the .git directory in it)
 BASE = Path(ml_project.__file__).parent.parent.absolute()
 
-# main folders
+# main directories
 DATA = BASE / 'data'
 
 DATASET = DATA / 'dataset'
@@ -18,8 +20,8 @@ NE_110M_COUNTRIES_SHP = NATURAL_EARTH / 'ne_110m_admin_0_countries' / 'ne_110m_a
 # data for the dataset creation
 VECTOR_TILES = DATASET_META / 'vector_tiles'
 
-def FILE_VECTOR_TILE(x,y,z,tileset_ids):
-    return VECTOR_TILES / f'z{z}x{x}y{y}_{",".join(tileset_ids)}.mvt'
+def FILE_VECTOR_TILE(x,y,z):
+    return VECTOR_TILES / f'z{z}x{x}y{y}_{mapbox.VECTOR_TILESET_ID}.mvt'
 
 FILE_POINTS = DATASET_META / 'points.csv'
 
@@ -28,12 +30,28 @@ IMAGES = DATASET / 'images'
 SATELLITE_IMAGES = IMAGES / 'satellite'
 MASK_IMAGES = IMAGES / 'mask'
 
-def FILE_SATELLITE_IMAGE(x,y,z,size):
+def FILE_SATELLITE_IMAGE(x,y,z,size=data.PX_WIDTH):
     return SATELLITE_IMAGES / f'z{z}x{x}y{y}_px{size}.jpg'
 
-def FILE_MASK_IMAGE(x,y,z,size):
+def FILE_MASK_IMAGE(x,y,z,size=data.PX_WIDTH):
     return MASK_IMAGES / f'z{z}x{x}y{y}_px{size}.png'
 
 FILE_METADATA = DATASET / 'metadata.csv'
 
 
+# automatically create the directories when this file is imported
+def check_dir(path):
+    if not os.path.isdir(path):
+        os.mkdir(path)
+        print(f'NOTE: Directory "{str(path)}" did not exist and was now created')
+    
+check_dir(DATA)
+check_dir(DATASET)
+check_dir(DATASET_META)
+check_dir(NATURAL_EARTH)
+
+check_dir(VECTOR_TILES)
+
+check_dir(IMAGES)
+check_dir(SATELLITE_IMAGES)
+check_dir(MASK_IMAGES)
