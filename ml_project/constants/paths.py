@@ -30,11 +30,12 @@ SATELLITE_IMAGES = IMAGES / 'satellite'
 MASK_IMAGES = IMAGES / 'mask'
 
 def FILE_SATELLITE_IMAGE(x,y,z,size=data.PX_WIDTH):
-    return SATELLITE_IMAGES / f'z{z}x{x}y{y}_px{size}.jpg'
+    return SATELLITE_IMAGES / f'z{z}x{x}y{y}_px{size}.{data.SATELLITE_FORMAT}'
 
 def FILE_MASK_IMAGE(x,y,z,size=data.PX_WIDTH):
-    return MASK_IMAGES / f'z{z}x{x}y{y}_px{size}.png'
+    return MASK_IMAGES / f'z{z}x{x}y{y}_px{size}.{data.MASK_FORMAT}'
 
+FILE_SAMPLES = DATASET / 'samples.csv'
 FILE_METADATA = DATASET / 'metadata.csv'
 
 
