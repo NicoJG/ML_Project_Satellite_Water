@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 from ml_project.constants import mapbox,data
 import ml_project
@@ -41,8 +40,8 @@ FILE_METADATA = DATASET / 'metadata.csv'
 
 # automatically create the directories when this file is imported
 def check_dir(path):
-    if not os.path.isdir(path):
-        os.mkdir(path)
+    if not Path(path).is_dir():
+        Path(path).mkdir()
         print(f'NOTE: Directory "{str(path)}" did not exist and was now created')
     
 check_dir(DATA)
