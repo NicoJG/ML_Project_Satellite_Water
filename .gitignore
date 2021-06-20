@@ -1,4 +1,10 @@
-data/
+data/*
+
+!data/dataset
+data/dataset/*
+!data/dataset_metadata
+data/dataset_metadata/*
+
 !data/README.md
 !data/dataset/README.md
 !data/dataset_metadata/README.md
