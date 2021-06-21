@@ -18,6 +18,10 @@ LAT_MIN, LAT_MAX = 34.51, 71.20
 
 EXCLUDED_COUNTRIES = ['Iceland','Russia']
 
+# defining the optimal ratio of water to land in a tile
+WATER_RATIO_MIN = 0.2
+WATER_RATIO_MAX = 0.9
+
 # defining the order of columns in csv files
 POINTS_DF_COLUMNS = ['batch_id','id','geometry','in_eu','country','tile_x','tile_y','tile_z','new_tile','outer_tile_x','outer_tile_y','outer_tile_z','accepted_water']
 SAMPLES_DF_COLUMNS = ['id','tile_x','tile_y','tile_z','lon','lat','country','geometry']
