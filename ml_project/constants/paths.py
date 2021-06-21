@@ -24,6 +24,8 @@ def FILE_VECTOR_TILE(x,y,z):
 
 FILE_POINTS = DATASET_META / 'points.csv'
 
+FILE_RANDOM_STATE = DATASET_META / 'random_state.json'
+
 # actual dataset
 IMAGES = DATASET / 'images'
 SATELLITE_IMAGES = IMAGES / 'satellite'

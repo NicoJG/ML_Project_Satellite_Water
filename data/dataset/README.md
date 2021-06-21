@@ -18,8 +18,8 @@ A dataset containing random satellite images in Europe with a mask of water in t
 | tile_x | Tile x-Coordinate |
 | tile_y | Tile y-Coordinate |
 | tile_z | Tile z-Coordinate (Zoom) |
-| lat | Latitude of the Center of the Tile |
 | lon | Longitude of the Center of the Tile |
+| lat | Latitude of the Center of the Tile |
 | country | Country Name (in English) to which the Center of the Tile belongs to |
 | geometry | Polygon of the Bounding Box of the Tile in Geodetic Coordinates |
 
