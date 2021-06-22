@@ -68,12 +68,15 @@ def download_file(file_path,url,override=False,is_vector_tile=False,is_text=Fals
 def read_vector_tile(file_path):
     with open(file_path, mode='rb') as file:
         return mapbox_vector_tile.decode(file.read(),y_coord_down=True)
-        
-def load_water_df(x,y,z,session=None):
-    # get the information of an outer tile of water via a Vector Tile
+
+def download_vector_tile(x,y,z,session=None):
     file_path = paths.FILE_VECTOR_TILE(x,y,z)
     url = mapbox.URL_VECTOR(x,y,z)
     download_file(file_path,url,is_vector_tile=True,session=session)
+
+def load_water_df(x,y,z,session=None):
+    # get the information of an outer tile of water via a Vector Tile
+    file_path = paths.FILE_VECTOR_TILE(x,y,z)
     vector_tile = read_vector_tile(file_path)
     if 'water' not in vector_tile.keys():
         return None
