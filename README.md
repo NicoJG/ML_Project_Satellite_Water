@@ -11,6 +11,11 @@ You have to execute the following commands in the main directory. (without the `
 $ conda env create -f environment.yaml
 ```
 
+or just update:
+```
+conda env update -n ml_project -f environment.yaml
+```
+
 ```
 $ conda activate ml_project
 ```
