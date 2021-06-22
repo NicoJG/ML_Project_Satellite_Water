@@ -13,7 +13,7 @@ $ conda env create -f environment.yaml
 
 or just update:
 ```
-conda env update -n ml_project -f environment.yaml
+$ conda env update -n ml_project -f environment.yaml
 ```
 
 ```
