@@ -15,7 +15,7 @@ import geopandas as gpd
 import json
 
 # https://stackoverflow.com/a/39217788/13440768
-def download_file(file_path,url,override=False,is_vector_tile=False,is_text=False):
+def download_file(file_path,url,override=False,is_vector_tile=False,is_text=False,session=None):
     """
     Downloads the given URL into the given File Path, but checks if the File already exists
     
@@ -46,8 +46,10 @@ def download_file(file_path,url,override=False,is_vector_tile=False,is_text=Fals
     exists = path.is_file()
     if exists and not override:
         return exists
-    
-    r = requests.get(url,stream=True)
+    if session is None:
+        r = requests.get(url,stream=True)
+    else:
+        r = session.get(url,stream=True)
     r.raise_for_status()
     if is_vector_tile:
         with open(path,'wb') as file:
@@ -67,11 +69,11 @@ def read_vector_tile(file_path):
     with open(file_path, mode='rb') as file:
         return mapbox_vector_tile.decode(file.read(),y_coord_down=True)
         
-def load_water_df(x,y,z):
+def load_water_df(x,y,z,session=None):
     # get the information of an outer tile of water via a Vector Tile
     file_path = paths.FILE_VECTOR_TILE(x,y,z)
     url = mapbox.URL_VECTOR(x,y,z)
-    download_file(file_path,url,is_vector_tile=True)
+    download_file(file_path,url,is_vector_tile=True,session=session)
     vector_tile = read_vector_tile(file_path)
     if 'water' not in vector_tile.keys():
         return None
