@@ -1,4 +1,4 @@
-from ml_project.constants import paths,mapbox,data
+from ml_project.utils import paths,mapbox,data
 
 from pathlib import Path
 import os

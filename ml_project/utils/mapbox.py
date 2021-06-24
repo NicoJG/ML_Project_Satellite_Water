@@ -1,4 +1,4 @@
-from ml_project.constants import data
+from ml_project.utils import data
 
 TOKEN = 'pk.eyJ1Ijoibmljb2pnIiwiYSI6ImNrcHljYjR0dzA2N2Yyb2pzazNjamhtMGoifQ.KzlCg0L861hO_DnNbEQ_UQ'
 

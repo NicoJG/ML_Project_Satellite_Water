@@ -1,4 +1,4 @@
-from ml_project.constants import data
+from ml_project.utils import data
 
 import mercantile
 import shapely.geometry

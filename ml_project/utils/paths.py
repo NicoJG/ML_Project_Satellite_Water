@@ -1,5 +1,5 @@
 from pathlib import Path
-from ml_project.constants import mapbox,data
+from ml_project.utils import mapbox,data
 import ml_project
 
 # points to the main directory (the directory with the .git directory in it)
