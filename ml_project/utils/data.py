@@ -24,7 +24,7 @@ WATER_RATIO_MAX = 0.95
 
 # defining the order of columns in csv files
 POINTS_DF_COLUMNS = ['batch_id','id','geometry','in_eu','country','tile_x','tile_y','tile_z','new_tile','outer_tile_x','outer_tile_y','outer_tile_z','accepted_water']
-SAMPLES_DF_COLUMNS = ['id','tile_x','tile_y','tile_z','lon','lat','country','geometry']
+SAMPLES_DF_COLUMNS = ['id','tile_x','tile_y','tile_z','lon','lat','country','satellite_file','mask_file','geometry']
 
 # different geographical projections
 # and the corresponding CRS string
