@@ -80,7 +80,9 @@ def load_water_df(x,y,z,session=None):
     vector_tile = read_vector_tile(file_path)
     if 'water' not in vector_tile.keys():
         return None
-    return gpd.GeoDataFrame.from_features(vector_tile['water']['features'])
+    water_df = gpd.GeoDataFrame.from_features(vector_tile['water']['features'])
+    del vector_tile
+    return water_df
 
 def read_csv_as_geodataframe(file_path,geometry='geometry',crs=None):
     df = pd.read_csv(file_path)
