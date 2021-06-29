@@ -40,6 +40,14 @@ def FILE_MASK_IMAGE(x,y,z,size=data.PX_WIDTH):
 FILE_SAMPLES = DATASET / 'samples.csv'
 FILE_METADATA = DATASET / 'metadata.csv'
 
+# preprocessed dataset
+PREPROCESSED = DATA / 'preprocessed'
+
+PREPROCESSED_IMAGES = PREPROCESSED / 'images'
+
+SATELLITE_IMAGES_128 = PREPROCESSED_IMAGES / 'satellite_128px'
+MASK_IMAGES_128 = PREPROCESSED_IMAGES / 'mask_128px'
+
 
 # automatically create the directories when this file is imported
 def check_dir(path):
@@ -51,9 +59,15 @@ check_dir(DATA)
 check_dir(DATASET)
 check_dir(DATASET_META)
 check_dir(NATURAL_EARTH)
+check_dir(PREPROCESSED)
 
 check_dir(VECTOR_TILES)
 
 check_dir(IMAGES)
 check_dir(SATELLITE_IMAGES)
 check_dir(MASK_IMAGES)
+
+check_dir(PREPROCESSED_IMAGES)
+check_dir(SATELLITE_IMAGES_128)
+check_dir(MASK_IMAGES_128)
+
