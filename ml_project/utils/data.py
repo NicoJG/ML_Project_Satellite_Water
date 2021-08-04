@@ -13,14 +13,17 @@ VECTOR_TILE_EXTENT = 4096
 # It envelopes Europe
 # But excludes Russia and Iceland
 # from https://boundingbox.klokantech.com/
-LON_MIN, LON_MAX = -10.49, 40.27
-LAT_MIN, LAT_MAX = 34.51, 71.20
+LON_MIN_FULL, LON_MAX_FULL = -10.49, 40.27
+LAT_MIN_FULL, LAT_MAX_FULL = 34.51, 71.20
+# Europe without Scandinavia
+LON_MIN,LAT_MIN,LON_MAX,LAT_MAX = -10.84,35.97,32.89,59.69
 
-EXCLUDED_COUNTRIES = ['Iceland','Russia']
+#EXCLUDED_COUNTRIES = ['Iceland','Russia']
+EXCLUDED_COUNTRIES = ['Iceland','Russia','Norway','Sweden','Finland']
 
 # defining the optimal ratio of water to land in a tile
-WATER_RATIO_MIN = 0.1
-WATER_RATIO_MAX = 0.95
+WATER_RATIO_MIN = 0.05
+WATER_RATIO_MAX = 0.99
 
 # defining the order of columns in csv files
 POINTS_DF_COLUMNS = ['batch_id','id','geometry','in_eu','country','tile_x','tile_y','tile_z','new_tile','outer_tile_x','outer_tile_y','outer_tile_z','accepted_water']
