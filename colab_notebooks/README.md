@@ -1,6 +1,9 @@
 # Notebooks containing the model building, training and evaluation  
 
-Those notebooks were used with Google Colab and their GPU's for tensorflow.  
+Those notebooks were used with Google Colab and their GPU's for tensorflow.
+
+The segmentation of satellite images for water were done with a convolutional neural network using a UNet structure. (Main Model)
+As a second model a Random Forest was used pixelwise, after extracting gradient information of the image. (Alternative Model)
 
 In order for those to work the dataset needs to be in a zip on your Google Drive.  
 So a zip containing dataset/images/... must be at ML_Project_Satellite_Images/data/current_dataset.zip in your Google Drive.  
