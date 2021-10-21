@@ -1,0 +1,25 @@
+{
+    "model_name": "final_model",
+    "model_params": {
+        "filter_start": 18,
+        "filter_levels": 4,
+        "kernel_size": 3,
+        "kernel_initializer": "he_normal",
+        "dropout_start": 0.177895,
+        "learning_rate": 0.003795
+    },
+    "alternative_params": {
+        "train_pixels": 1000000,
+        "estimators": 60,
+        "max_depth": 32,
+        "growing_strategy": "LOCAL",
+        "sorting_strategy": "IN_NODE"
+    },
+    "img_size": 128,
+    "batch_size": 128,
+    "epochs": 50,
+    "sample_size": null,
+    "test_size": 0.2,
+    "val_size": 0.15,
+    "random_state": 42
+}
