@@ -1,5 +1,6 @@
 # ML_Project_Satellite_Images
-Project for the "machine learning for physics" seminar at TU Dortmund Summer 2021
+Project for the "machine learning for physics" seminar at TU Dortmund Summer 2021  
+[Project report](https://github.com/NicoJG/ML_Project_Protocol/blob/main/Abgabe.pdf) , [Report Repository](https://github.com/NicoJG/ML_Project_Protocol)  
 
 # About
 
@@ -13,7 +14,6 @@ The folder 'colab_notebooks' contains the Jupyter Notebooks used for the actual 
 
 The dataset was collected with Mapbox and therefore no images of the dataset can be uploaded here.  
 This is why all outputs of the notebooks were removed using 'nbstripout'. 
-That's also why the project presentation and project report are not uploaded here.  
 
 In order to use this project, follow the installation instructions below.
 For the dataset creation use 'ml_project/dataset_creation/dataset_creation.ipynb'.
